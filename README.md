@@ -1,6 +1,7 @@
 ## Make home feel like work.
 
 Build docker command:
+
 docker build -t mio-terraform-container .
 
 General jist on how to run it :
