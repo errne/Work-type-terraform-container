@@ -19,5 +19,13 @@ RUN aws --version
 RUN echo "alias ll='ls -l --color=auto'" >> /root/.bashrc && \
     echo "alias tailf='tail -f'" >> /root/.bashrc
 
+# Copy the entrypoint script into the image
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Make the script executable
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+
 WORKDIR /home
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["bash"]
