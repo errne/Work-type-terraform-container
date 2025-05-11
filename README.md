@@ -1,4 +1,4 @@
-Make home feel like work.
+## Make home feel like work.
 
 Build docker command:
 docker build -t mio-terraform-container .
